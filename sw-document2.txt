@@ -1,0 +1,23 @@
+import random
+
+def bubble(l):
+    for i in range(len(l)):
+        for j in range(len(l)-1):
+            if l[j] > l[j+1]:
+                temp = l[j]
+                l[j] = l[j+1]
+                l[j+1] = temp
+
+if __name__ == '__main__':
+    sort_list = [1, 2, 3, 4, 5, 6, 7, 8]
+    i = 0
+    while i < len(sort_list):
+        index = random.randint(0, 6)
+        temp = sort_list[index]
+        sort_list[index] = sort_list[index+1]
+        sort_list[index+1] = temp
+        i += 1
+
+    print("after : ", sort_list)
+    bubble(sort_list)
+    print("before : ", sort_list)
